@@ -13,6 +13,8 @@ for (let crs of Object.values(all)) {
     
     let kind = crs.kind == "CRS-PROJCRS" ? "P":"G";
     
-    console.log([crs.code,kind,crs.name,boundsStr].join(","));
+    let name = crs.name.replace(/\,/g,";");
+    
+    console.log([crs.code,kind,name,boundsStr].join(","));
   }
 }
