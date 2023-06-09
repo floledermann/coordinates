@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "epsg-index": "^1.3.0"
+  }
+}
