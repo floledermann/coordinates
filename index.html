@@ -11,9 +11,25 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+body {
+  font-size: 5.8vmin;
+  xbackground-color: #f6f6f6;
+}
+
+button {
+  font-size: inherit;
+  padding: 0.1em 0.5em;
+}
+
 section {
-  margin: 1em 0;
-  max-width: 300px;
+  xmargin: 0.2em 0;
+  padding: 0.2em;
+  max-width: 100vmin;
+  
+  border-radius: 0.2em;
+  xborder: 1px solid #cccccc;
+  background-color: #ffffff;
+  xbox-shadow: 0px 0px 0.2em 0 rgba(0,0,0,0.2);
 }
 
 h1, .crs-chooser {
@@ -22,11 +38,7 @@ h1, .crs-chooser {
 
 h1 {
   margin: 0.1em 0;
-}
-
-h1 .label {
-  display: inline-block;
-  width: 3.2em;
+  font-size: 1.8em;
 }
 
 .paused .pause,
@@ -34,6 +46,64 @@ h1 .label {
   display: none;
 }
 
+/* Layout */
+
+h1 {
+  display: flex;
+}
+
+h1 .label {
+  flex: 0 0 3.2em;
+}
+
+h1 .value {
+  flex: 1 0 4em;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+h1 .unit {
+  flex: 0 0 0.5em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  column-gap: 0.7em;
+  row-gap: 0.5em;
+}
+
+header {
+  flex: 0 0 1.5em;
+  padding: 0.2em;
+}
+
+main {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-aspect-ratio: 1.3) {
+  body {
+    flex-direction: row;
+    font-size: 5.6vmin;
+  }
+  header {
+    flex-direction: column;
+  }
+  main {
+    /* This would center it, but looks weird */
+    xmargin: auto;
+  }
+}
 </style>
 
 </head>
@@ -43,6 +113,7 @@ h1 .label {
 <button class="track">Track</button><button class="pause">Pause</button> <button class="settings">Settings</button>
 </header>
 
+<main>
 <section id="coords-1">
 <div class="crs-chooser">
 EPSG:4326 (WGS-84) <button class="info">i</button>
@@ -58,6 +129,7 @@ EPSG:31256 (Austria GK East) <button class="info">i</button>
 <h1 class="coords-east"><span class="label">East:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
 <h1 class="coords-north"><span class="label">North:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
 </section>
+</main>
 
 <script type="module">
 
@@ -69,35 +141,96 @@ async function importUMD(url, module = {exports:{}}) {
 //import proj from "https://unpkg.com/proj4@2.9.0/lib/index.js?module";
 const proj = await importUMD("https://unpkg.com/proj4@2.9.0/dist/proj4-src.js");
 
+let geoWatchID = null;
+
 document.querySelector("button.track").addEventListener("click", e => {
   document.body.classList.remove("paused");
   document.body.classList.add("tracking");
+  
+  if (!geoWatchID) {
+    geoWatchID = navigator.geolocation.watchPosition(updatePosition, positionError, {
+      enableHighAccuracy: true,
+      maximumAge: 0
+    });
+  }
 });
 
 document.querySelector("button.pause").addEventListener("click", e => {
   document.body.classList.remove("tracking");
   document.body.classList.add("paused");
+  
+  if (geoWatchID) {
+    navigator.geolocation.clearWatch(geoWatchID);
+    geoWatchID = null;
+  }
+
 });
+
+let proj_1 = null;
+let proj_2 = null;
 
 Promise.all([
   fetch("https://unpkg.com/epsg-index@1.3.0/s/4326.json").then(r => r.json()),
   fetch("https://unpkg.com/epsg-index@1.3.0/s/31256.json").then(r => r.json())
-]).then(([fromCRS, toCRS]) => {
+]).then(([CRS_1, CRS_2]) => {
   //console.log(fromCRS.name);
-  console.log(toCRS);
+  console.log(CRS_2);
   
-  let fromCoords = [16.3738, 48.2082];
-  let coords = proj(toCRS.proj4, fromCoords);
-  
-  console.log(coords);
-  
-  document.querySelector("#coords-1 .coords-east .value").textContent = fromCoords[0].toFixed(5);
-  document.querySelector("#coords-1 .coords-north .value").textContent = fromCoords[1].toFixed(5);
-  
-  document.querySelector("#coords-2 .coords-east .value").textContent = coords[0].toFixed(2);
-  document.querySelector("#coords-2 .coords-north .value").textContent = coords[1].toFixed(2);
+  proj_1 = proj(CRS_1.proj4);
+  proj_2 = proj(CRS_2.proj4);
+    
+  updatePosition([16.3738, 48.2082]);
   
 });
+
+let allCRS = null;
+let availableCRS = null;
+
+fetch("allEPSG.csv").then(r => r.text()).then(txt => {
+  allCRS = txt.split("\n").map(l => l.split(",")).map(arr => ({
+    code: +arr[0],
+    kind: arr[1]=="P" ? "PROJECTED" : "GEO",
+    name: arr[2].replace(/;/g,","),
+    bbox: arr[3]=="-" ? [90,-180,-90,180] : arr[3].split(";").map(s => +s)
+  }));
+  
+  //console.log(allCRS);
+  
+  let pos = [16.3738, 48.2082];
+  
+  availableCRS = Object.fromEntries(allCRS.filter(crs => 
+    pos[1] < crs.bbox[0] &&
+    pos[0] > crs.bbox[1] &&
+    pos[1] > crs.bbox[2] &&
+    pos[0] < crs.bbox[3]
+  ).map(crs => [crs.code,crs]));
+  
+  console.log(availableCRS);
+});
+
+function updatePosition(pos) {
+
+  if (!Array.isArray(pos)) {
+    // convert position received from API
+    pos = [pos.coords.longitude, pos.coords.latitude];
+  }
+
+  if (proj_1) {
+    let coords_1 = proj_1.forward(pos);
+    document.querySelector("#coords-1 .coords-east .value").textContent = coords_1[0].toFixed(5);
+    document.querySelector("#coords-1 .coords-north .value").textContent = coords_1[1].toFixed(5);
+  }
+  
+  if (proj_2) {
+    let coords_2 = proj_2.forward(pos);
+    document.querySelector("#coords-2 .coords-east .value").textContent = coords_2[0].toFixed(2);
+    document.querySelector("#coords-2 .coords-north .value").textContent = coords_2[1].toFixed(2);
+  }
+}
+
+function positionError(err) {
+  console.log(err);
+}
 
 </script>
 </body>
