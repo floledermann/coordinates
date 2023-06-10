@@ -3,7 +3,7 @@ const all = require('epsg-index/all.json')
 for (let crs of Object.values(all)) {
   //console.log(crs.kind + ":" + crs.name);
   // only use projected or geographic CRS, ignore planetary CRS
-  if (["CRS-PROJCRS","CRS-GEOGCRS"].includes(crs.kind) && crs.code<104872) {
+  if (["CRS-PROJCRS","CRS-GEOGCRS"].includes(crs.kind) && crs.code<104872 && !(crs.code >= 103877 && crs.code <= 103887 )) {
     let bounds = crs.bbox;
     let boundsStr = "-";
     
