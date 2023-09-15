@@ -32,7 +32,7 @@ section {
   xbox-shadow: 0px 0px 0.2em 0 rgba(0,0,0,0.2);
 }
 
-h1, .crs-chooser {
+h1, .show-crs-chooser {
   cursor: pointer;
 }
 
@@ -104,6 +104,84 @@ main {
     xmargin: auto;
   }
 }
+
+/* Styling */
+
+.show-crs-chooser::before {
+  content: '▼';
+  font-size: 70%;
+  vertical-align: 15%;
+}
+
+dialog::backdrop {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+/* set display flex only for *open* dialog, to make close() work */
+.crs-chooser[open] {
+  display: flex;
+}
+
+.crs-chooser {
+  /* display: flex; */
+  box-sizing: border-box;
+  flex-direction: column;
+  font-size: 60%;
+  margin: 1.2em;
+  padding: 0;
+  height: calc(100vh - 2.4em);
+  width: calc(100vw - 2.4em);
+  border: 1px solid #ddd;
+  box-shadow: 0 0 0.3em -0.1em;
+}
+
+.crs-chooser form {
+  padding: 1em;
+  flex-grow: 0; 
+}
+
+.crs-chooser form label {
+  font-size: 50%;
+}
+
+.crs-chooser form input[type="text"] {
+  box-sizing: border-box;
+  font-size: inherit;
+  width: 100%;
+  padding: 0.2em;
+}
+
+.crs-chooser form input[type="checkbox"] {
+  font-size: 40%;
+  width: 1em;
+  height: 1em;
+}
+
+.crs-chooser .crs-list {
+  flex-grow: 1; 
+  list-style-type: none;
+  padding-left: 0;
+  padding: 0 1em 1em;
+  margin: 0;
+  overflow: auto;
+}
+
+.crs-chooser .crs-list li {
+  border: 1px solid #ddd;
+  border-bottom: none;
+  padding: 0.3em;
+  cursor: pointer;
+}
+
+.crs-chooser .crs-list li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.crs-chooser .crs-list li:hover {
+  background-color: #f6f6f6;
+}
+
 </style>
 
 </head>
@@ -115,7 +193,7 @@ main {
 
 <main>
 <section id="coords-1">
-<div class="crs-chooser">
+<div class="show-crs-chooser">
 EPSG:4326 (WGS-84) <button class="info">i</button>
 </div>
 <h1 class="coords-east"><span class="label">East:</span> <span class="value">0.000000</span><span class="unit">°</span></h1>
@@ -123,13 +201,30 @@ EPSG:4326 (WGS-84) <button class="info">i</button>
 </section>
 
 <section id="coords-2">
-<div class="crs-chooser">
+<div class="show-crs-chooser">
 EPSG:31256 (Austria GK East) <button class="info">i</button>
 </div>
 <h1 class="coords-east"><span class="label">East:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
 <h1 class="coords-north"><span class="label">North:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
 </section>
 </main>
+
+<dialog id="crs-chooser" class="crs-chooser">
+<form>
+<div>
+<input type="text" class="crs-search" id="crs-search" placeholder="🔍︎">
+</div>
+<div>
+<input type="checkbox" id="crs-bounds-only" checked> <label>Only include CRS defined for the current position</label>
+</div>
+</form>
+<ul class="crs-list">
+<!--
+<li>EPSG:4326 (WGS-84)</li>
+<li>EPSG:31256 (Austria GK East)</li>
+-->
+</ul>
+</dialog>
 
 <script type="module">
 
@@ -165,6 +260,35 @@ document.querySelector("button.pause").addEventListener("click", e => {
   }
 
 });
+
+let crsChooser = document.getElementById("crs-chooser");
+document.querySelector(".show-crs-chooser").addEventListener("click", e => {
+  crsChooser.showModal();
+});
+
+document.getElementById("crs-search").addEventListener("input", e => {
+  let str = e.target.value.toLowerCase();
+  if (availableCRS) {
+    let filteredCRS = Object.values(availableCRS);
+    if (str) {
+      filteredCRS = filteredCRS.filter(d => (d.code+"").includes(str) || d.name.toLowerCase().includes(str));
+    }
+    updateCRSList(filteredCRS);
+  }
+});
+
+function updateCRSList(crsList) {
+  let ul = document.querySelector("#crs-chooser .crs-list");
+  ul.innerHTML = "";
+  for (let crs of crsList) {
+    let li = document.createElement("li");
+    li.innerHTML = "EPSG:" + crs.code + " (" + crs.name + ")";
+    ul.appendChild(li);
+    li.addEventListener("click", e => {
+      crsChooser.close();
+    });
+  }
+}
 
 let proj_1 = null;
 let proj_2 = null;
@@ -206,6 +330,8 @@ fetch("allEPSG.csv").then(r => r.text()).then(txt => {
   ).map(crs => [crs.code,crs]));
   
   console.log(availableCRS);
+    
+  updateCRSList(Object.values(availableCRS));
 });
 
 function updatePosition(pos) {
