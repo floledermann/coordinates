@@ -19,6 +19,7 @@ body {
 button {
   font-size: inherit;
   padding: 0.1em 0.5em;
+  cursor: pointer;
 }
 
 section {
@@ -30,10 +31,6 @@ section {
   xborder: 1px solid #cccccc;
   background-color: #ffffff;
   xbox-shadow: 0px 0px 0.2em 0 rgba(0,0,0,0.2);
-}
-
-h1, .show-crs-chooser {
-  cursor: pointer;
 }
 
 h1 {
@@ -107,10 +104,22 @@ main {
 
 /* Styling */
 
+.show-crs-chooser {
+  border: 0.5px solid #fff;
+  border-radius: 0.2em;
+  margin: -0.2em;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
 .show-crs-chooser::before {
   content: '▼';
   font-size: 70%;
   vertical-align: 15%;
+}
+
+.show-crs-chooser:hover {
+  border-color: #bbb;
 }
 
 dialog::backdrop {
@@ -128,6 +137,7 @@ dialog::backdrop {
   box-sizing: border-box;
   flex-direction: column;
   font-size: 60%;
+  font-size: max(60%,18px);
   margin: 1.2em;
   padding: 0;
   height: calc(100vh - 2.4em);
@@ -136,13 +146,14 @@ dialog::backdrop {
   box-shadow: 0 0 0.3em -0.1em;
 }
 
+
 .crs-chooser form {
   padding: 1em;
   flex-grow: 0; 
 }
 
 .crs-chooser form label {
-  font-size: 50%;
+  font-size: 80%;
 }
 
 .crs-chooser form input[type="text"] {
@@ -153,7 +164,7 @@ dialog::backdrop {
 }
 
 .crs-chooser form input[type="checkbox"] {
-  font-size: 40%;
+  font-size: 60%;
   width: 1em;
   height: 1em;
 }
@@ -182,40 +193,43 @@ dialog::backdrop {
   background-color: #f6f6f6;
 }
 
+.crs-chooser .checkbox-wrapper {
+  line-height: 0.9;
+  margin: 0.3em 0 0;
+}
+
+.crs-chooser .close-button {
+  position: absolute;
+  top: -0.1em;
+  right: 0.2em;
+  cursor: pointer;
+}
+
+.crs-chooser .close-button::before {
+  content: '×';
+  font-size: 1.2em;
+  color: #999;
+}
 </style>
 
 </head>
 <body class="paused">
 
 <header>
-<button class="track">Track</button><button class="pause">Pause</button> <button class="settings">Settings</button>
+<button class="track">Track</button><button class="pause">Pause</button> <!--<button class="settings">Settings</button>-->
 </header>
 
 <main>
-<section id="coords-1">
-<div class="show-crs-chooser">
-EPSG:4326 (WGS-84) <button class="info">i</button>
-</div>
-<h1 class="coords-east"><span class="label">East:</span> <span class="value">0.000000</span><span class="unit">°</span></h1>
-<h1 class="coords-north"><span class="label">North:</span> <span class="value">0.000000</span><span class="unit">°</span></h1>
-</section>
 
-<section id="coords-2">
-<div class="show-crs-chooser">
-EPSG:31256 (Austria GK East) <button class="info">i</button>
-</div>
-<h1 class="coords-east"><span class="label">East:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
-<h1 class="coords-north"><span class="label">North:</span> <span class="value">000000.00</span><span class="unit">m</span></h1>
-</section>
-</main>
 
 <dialog id="crs-chooser" class="crs-chooser">
+<div class="close-button"></div>
 <form>
 <div>
-<input type="text" class="crs-search" id="crs-search" placeholder="🔍︎">
+<input type="text" class="crs-search" id="crs-search" placeholder="🔍︎ Search">
 </div>
-<div>
-<input type="checkbox" id="crs-bounds-only" checked> <label>Only include CRS defined for the current position</label>
+<div class="checkbox-wrapper">
+<input type="checkbox" id="crs-bounds-only" checked> <label for="crs-bounds-only">Only include CRS defined for the current position</label>
 </div>
 </form>
 <ul class="crs-list">
@@ -225,6 +239,17 @@ EPSG:31256 (Austria GK East) <button class="info">i</button>
 -->
 </ul>
 </dialog>
+</main>
+
+<template id="crsDisplayTemplate">
+<section class="crs-display">
+<div class="show-crs-chooser">
+<span class="crs-title">EPSG:4326 (WGS-84)</span><!-- <button class="info">i</button> -->
+</div>
+<h1 class="coords-east"><span class="label">East:</span> <span class="value">0.000000</span><span class="unit"></span></h1>
+<h1 class="coords-north"><span class="label">North:</span> <span class="value">0.000000</span><span class="unit"></span></h1>
+</section>
+</template>
 
 <script type="module">
 
@@ -234,7 +259,7 @@ async function importUMD(url, module = {exports:{}}) {
 // works, but loads hundreds of small files
 // ==> load UMD packaged module instead  
 //import proj from "https://unpkg.com/proj4@2.9.0/lib/index.js?module";
-const proj = await importUMD("https://unpkg.com/proj4@2.9.0/dist/proj4-src.js");
+const proj = await importUMD("proj4_2.9.0.js");
 
 let geoWatchID = null;
 
@@ -261,77 +286,132 @@ document.querySelector("button.pause").addEventListener("click", e => {
 
 });
 
-let crsChooser = document.getElementById("crs-chooser");
-document.querySelector(".show-crs-chooser").addEventListener("click", e => {
-  crsChooser.showModal();
-});
+let crsChooser = (() => {
+  let chooserEl = document.getElementById("crs-chooser");
 
-document.getElementById("crs-search").addEventListener("input", e => {
-  let str = e.target.value.toLowerCase();
-  if (availableCRS) {
-    let filteredCRS = Object.values(availableCRS);
-    if (str) {
-      filteredCRS = filteredCRS.filter(d => (d.code+"").includes(str) || d.name.toLowerCase().includes(str));
+  chooserEl.querySelector(".close-button").addEventListener("click", e => {
+    chooserEl.close();
+  });
+  
+  chooserEl.querySelector("#crs-search").addEventListener("input", e => {
+    let str = e.target.value.toLowerCase();
+    if (availableCRS) {
+      let filteredCRS = availableCRS;
+      if (str) {
+        filteredCRS = filteredCRS.filter(d => (d.code+"").includes(str) || d.name.toLowerCase().includes(str));
+      }
+      updateCRSList(filteredCRS);
     }
-    updateCRSList(filteredCRS);
-  }
-});
+  });
 
-function updateCRSList(crsList) {
-  let ul = document.querySelector("#crs-chooser .crs-list");
-  ul.innerHTML = "";
-  for (let crs of crsList) {
-    let li = document.createElement("li");
-    li.innerHTML = "EPSG:" + crs.code + " (" + crs.name + ")";
-    ul.appendChild(li);
-    li.addEventListener("click", e => {
-      crsChooser.close();
-    });
+  let callback = null;
+  let allCRS = null;
+  let availableCRS = null;
+  let filterPosition = null;
+  
+  function updateCRSList(crsList) {
+    let ul = chooserEl.querySelector(".crs-list");
+    ul.innerHTML = "";
+    for (let crs of crsList) {
+      let li = document.createElement("li");
+      li.innerHTML = "EPSG:" + crs.code + " (" + crs.name + ")";
+      ul.appendChild(li);
+      li.addEventListener("click", e => {
+        chooserEl.close();
+        callback?.(crs);
+      });
+    }
   }
-}
+  
+  return {
+    close: () => {
+      callback = null;
+      chooserEl.close();
+    },
+    show: (position, _callback) => {
+      callback = _callback;
+      
+      availableCRS = allCRS.filter(crs => 
+        position[1] < crs.bbox[0] &&
+        position[0] > crs.bbox[1] &&
+        position[1] > crs.bbox[2] &&
+        position[0] < crs.bbox[3]
+      ); //.map(crs => [crs.code,crs]));
+  
+      updateCRSList(availableCRS);
+      chooserEl.showModal();
+    },
+    setCRSList: crs => {
+      allCRS = crs;
+    }
+  }
+})();
 
-let proj_1 = null;
-let proj_2 = null;
+let position = null;
+
+let displays = [];
+
+let baseURL = "https://unpkg.com/epsg-index@1.3.0/s/";
+// for local dev
+baseURL = "node_modules/epsg-index/s/";
 
 Promise.all([
-  fetch("https://unpkg.com/epsg-index@1.3.0/s/4326.json").then(r => r.json()),
-  fetch("https://unpkg.com/epsg-index@1.3.0/s/31256.json").then(r => r.json())
-]).then(([CRS_1, CRS_2]) => {
+  fetch(baseURL + "4326.json").then(r => r.json()),
+  fetch(baseURL + "31256.json").then(r => r.json())
+]).then((dataArray) => {
   //console.log(fromCRS.name);
-  console.log(CRS_2);
+
+  let crsDisplayTemplate = document.getElementById("crsDisplayTemplate").content.firstElementChild;
   
-  proj_1 = proj(CRS_1.proj4);
-  proj_2 = proj(CRS_2.proj4);
+  displays = dataArray.map(d =>
+  ({
+    data: d,
+    proj: proj(d.proj4),
+    unit: d.unit,
+    el: crsDisplayTemplate.cloneNode(true)
+  }));
+  
+  let container = document.querySelector("main");
+  for (let [index, display] of Object.entries(displays)) {
+    container.appendChild(display.el);
+    display.el.querySelector(".show-crs-chooser").addEventListener("click", e => {
+      crsChooser.show(position, (selectedCRSMeta) => {
+        if (!selectedCRSMeta) return;
+        
+        fetch(baseURL + selectedCRSMeta.code + ".json").then(r => r.json()).then(data => {
+          Object.assign(display, {
+            data: data,
+            proj: proj(data.proj4),
+            unit: data.unit
+          });
+          display.el.querySelector(".crs-title").textContent = data.name;
+          updatePosition(position);
+        });
+      });
+    });
+
+  }
     
+  console.log(displays);
   updatePosition([16.3738, 48.2082]);
   
 });
 
 let allCRS = null;
-let availableCRS = null;
 
 fetch("allEPSG.csv").then(r => r.text()).then(txt => {
   allCRS = txt.split("\n").map(l => l.split(",")).map(arr => ({
     code: +arr[0],
     kind: arr[1]=="P" ? "PROJECTED" : "GEO",
     name: arr[2].replace(/;/g,","),
-    bbox: arr[3]=="-" ? [90,-180,-90,180] : arr[3].split(";").map(s => +s)
+    bbox: arr[3].trim()=="-" ? [90,-180,-90,180] : arr[3].split(";").map(s => +s)
   }));
   
-  //console.log(allCRS);
+  //let pos = [16.3738, 48.2082];
   
-  let pos = [16.3738, 48.2082];
-  
-  availableCRS = Object.fromEntries(allCRS.filter(crs => 
-    pos[1] < crs.bbox[0] &&
-    pos[0] > crs.bbox[1] &&
-    pos[1] > crs.bbox[2] &&
-    pos[0] < crs.bbox[3]
-  ).map(crs => [crs.code,crs]));
-  
-  console.log(availableCRS);
+  console.log(allCRS);
     
-  updateCRSList(Object.values(availableCRS));
+  crsChooser.setCRSList(allCRS);
 });
 
 function updatePosition(pos) {
@@ -341,16 +421,18 @@ function updatePosition(pos) {
     pos = [pos.coords.longitude, pos.coords.latitude];
   }
 
-  if (proj_1) {
-    let coords_1 = proj_1.forward(pos);
-    document.querySelector("#coords-1 .coords-east .value").textContent = coords_1[0].toFixed(5);
-    document.querySelector("#coords-1 .coords-north .value").textContent = coords_1[1].toFixed(5);
-  }
+  position = pos;
   
-  if (proj_2) {
-    let coords_2 = proj_2.forward(pos);
-    document.querySelector("#coords-2 .coords-east .value").textContent = coords_2[0].toFixed(2);
-    document.querySelector("#coords-2 .coords-north .value").textContent = coords_2[1].toFixed(2);
+  for (let d of displays) {
+    let coords_1 = d.proj.forward(pos);
+    let digits = d.unit.startsWith("degree") ? 5 : 2;
+    let unit = 
+      d.unit.startsWith("degree") ? "°" :"";
+    d.el.querySelector(".coords-east .value").textContent = coords_1[0].toFixed(digits);
+    d.el.querySelector(".coords-north .value").textContent = coords_1[1].toFixed(digits);
+    for (let el of d.el.querySelectorAll(".unit")) {
+      el.textContent = unit;
+    }
   }
 }
 
