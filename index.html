@@ -329,6 +329,9 @@ let crsChooser = (() => {
       chooserEl.close();
     },
     show: (position, _callback) => {
+    
+      chooserEl.querySelector("#crs-search").value = "";
+      
       callback = _callback;
       
       availableCRS = allCRS.filter(crs => 
