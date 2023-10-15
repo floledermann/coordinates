@@ -303,6 +303,12 @@ let crsChooser = (() => {
       updateCRSList(filteredCRS);
     }
   });
+  
+  chooserEl.addEventListener('click', event => {
+    if (event.target === event.currentTarget) {
+        event.currentTarget.close();
+    }
+  })
 
   let callback = null;
   let allCRS = null;
