@@ -1,4 +1,3 @@
-2000,P,Anguilla 1957 / British West Indies Grid,18.33;-63.22;18.11;-62.92
 2001,P,Antigua 1943 / British West Indies Grid,17.22;-61.95;16.94;-61.61
 2002,P,Dominica 1945 / British West Indies Grid,15.69;-61.55;15.14;-61.2
 2003,P,Grenada 1953 / British West Indies Grid,12.57;-61.84;11.94;-61.35
@@ -171,10 +170,8 @@
 2215,P,Manoca 1962 / UTM zone 32N,4.99;8.45;2.16;10.4
 2216,P,Qornoq 1927 / UTM zone 22N,73.05;-54;60.63;-48
 2217,P,Qornoq 1927 / UTM zone 23N,62.05;-48;59.74;-42.52
-2218,P,Scoresbysund 1952 / Greenland zone 5 east,72;-29.69;69;-21.32
 2219,P,ATS77 / UTM zone 19N,48.07;-69;43.64;-66
 2220,P,ATS77 / UTM zone 20N,47.98;-66;43.41;-59.73
-2221,P,Scoresbysund 1952 / Greenland zone 6 east,69;-26.99;68.66;-25.14
 2222,P,NAD83 / Arizona East (ft),37.01;-111.71;31.33;-109.04
 2223,P,NAD83 / Arizona Central (ft),37.01;-113.35;31.33;-110.44
 2224,P,NAD83 / Arizona West (ft),37;-114.81;32.05;-112.52
@@ -244,14 +241,6 @@
 2290,P,ATS77 / Prince Edward Isl. Stereographic (ATS77),47.09;-64.49;45.9;-61.9
 2294,P,ATS77 / MTM Nova Scotia zone 4,47.08;-63;44.64;-59.73
 2295,P,ATS77 / MTM Nova Scotia zone 5,46.02;-66.28;43.41;-63
-2296,P,Ammassalik 1958 / Greenland zone 7 east,65.91;-38.86;65.52;-36.81
-2299,P,Qornoq 1927 / Greenland zone 2 west,79;-73.29;78;-65.24
-2301,P,Qornoq 1927 / Greenland zone 3 west,78;-72.79;75;-56.31
-2303,P,Qornoq 1927 / Greenland zone 4 west,75;-58.21;72;-52.02
-2304,P,Qornoq 1927 / Greenland zone 5 west,72;-56.06;69;-49.11
-2305,P,Qornoq 1927 / Greenland zone 6 west,69;-54.09;66;-49.4
-2306,P,Qornoq 1927 / Greenland zone 7 west,66;-53.7;63;-49.17
-2307,P,Qornoq 1927 / Greenland zone 8 east,63;-50.72;59.74;-42.52
 2308,P,Batavia / TM 109 SE,-4.07;105.77;-6.89;110.01
 2309,P,WGS 84 / TM 116 SE,-6.8;112.8;-8.46;117.01
 2310,P,WGS 84 / TM 132 SE,-1.97;131.89;-2.94;133.82
@@ -896,7 +885,6 @@
 2960,P,NAD83(CSRS) / UTM zone 19N,84;-72;40.8;-66
 2961,P,NAD83(CSRS) / UTM zone 20N,84;-66;40.04;-60
 2962,P,NAD83(CSRS) / UTM zone 21N,84;-60;38.56;-54
-2963,P,Lisbon 1890 (Lisbon) / Portugal Bonne,42.16;-9.56;36.95;-6.19
 2964,P,NAD27 / Alaska Albers,71.4;172.42;51.3;-129.99
 2965,P,NAD83 / Indiana East (ftUS),41.77;-86.59;37.95;-84.78
 2966,P,NAD83 / Indiana West (ftUS),41.77;-88.06;37.77;-86.24
@@ -913,8 +901,6 @@
 2978,P,IGN72 Nuku Hiva / UTM zone 7S,-8.72;-140.31;-9.57;-139.44
 2980,P,Combani 1950 / UTM zone 38S,-12.61;44.98;-13.05;45.35
 2981,P,IGN56 Lifou / UTM zone 58S,-20.62;166.98;-21.24;167.52
-2985,P,Petrels 1972 / Terre Adelie Polar Stereographic,-66.1;139.44;-66.78;141.5
-2986,P,Perroud 1950 / Terre Adelie Polar Stereographic,-65.61;136;-67.13;142
 2987,P,Saint Pierre et Miquelon 1950 / UTM zone 21N,47.19;-56.48;46.69;-56.07
 2988,P,MOP78 / UTM zone 1S,-13.16;-176.25;-13.41;-176.07
 2991,P,NAD83 / Oregon LCC (m),46.26;-124.6;41.98;-116.47
@@ -974,8 +960,6 @@
 3047,P,ETRS89 / UTM zone 35N (N-E),84.73;24;59.64;30.01
 3048,P,ETRS89 / UTM zone 36N (N-E),84.7;30;61.73;36.01
 3049,P,ETRS89 / UTM zone 37N (N-E),79.07;36;72.99;38.01
-3052,P,Reykjavik 1900 / Lambert 1900,66.59;-24.66;63.34;-13.38
-3053,P,Hjorsey 1955 / Lambert 1955,66.59;-24.66;63.34;-13.38
 3054,P,Hjorsey 1955 / UTM zone 26N,65.85;-24.66;64.71;-24
 3055,P,Hjorsey 1955 / UTM zone 27N,66.52;-24;63.34;-18
 3056,P,Hjorsey 1955 / UTM zone 28N,66.58;-18;63.45;-13.38
@@ -1060,8 +1044,6 @@
 3140,P,Viti Levu 1912 / Viti Levu Grid,-17.25;177.19;-18.32;178.75
 3141,P,Fiji 1956 / UTM zone 60S,-16.1;176.81;-19.22;180
 3142,P,Fiji 1956 / UTM zone 1S,-16.1;-180;-17.04;-179.77
-3144,P,FD54 / Faroe Lambert,62.41;-7.49;61.33;-6.33
-3145,P,ETRS89 / Faroe Lambert,62.41;-7.49;61.33;-6.33
 3148,P,Indian 1960 / UTM zone 48N,23.4;102.14;8.33;108
 3149,P,Indian 1960 / UTM zone 49N,21.56;108;10.43;109.53
 3152,P,ST74,59.43;17.75;59.22;18.2
@@ -1085,7 +1067,6 @@
 3170,P,RGNC91-93 / UTM zone 58S,-14.83;162;-26.45;168
 3171,P,RGNC91-93 / UTM zone 59S,-19.75;168;-25.95;174.28
 3172,P,IGN53 Mare / UTM zone 59S,-21.35;168;-21.71;168.19
-3173,P,fk89 / Faroe Lambert FK89,62.41;-7.49;61.33;-6.33
 3174,P,NAD83 / Great Lakes Albers,50.74;-93.17;40.99;-74.47
 3175,P,NAD83 / Great Lakes and St Lawrence Albers,52.22;-93.17;40.99;-54.75
 3176,P,Indian 1960 / TM 106 NE,11.15;106.54;7.99;110
@@ -1207,7 +1188,6 @@
 3292,P,WGS 84 / SCAR IMW SV51-60,-84;120;-88;180
 3293,P,WGS 84 / SCAR IMW SW01-60,-88;-180;-90;180
 3294,P,WGS 84 / USGS Transantarctic Mountains,-68.6;149.83;-80;174.01
-3295,P,Guam 1963 / Yap Islands,9.69;137.99;9.39;138.27
 3296,P,RGPF / UTM zone 5S,-12.5;-158.13;-26.7;-150
 3297,P,RGPF / UTM zone 6S,-7.29;-150;-31.2;-144
 3298,P,RGPF / UTM zone 7S,-4.52;-144;-31.24;-138
@@ -1769,7 +1749,6 @@
 3989,P,Katanga 1955 / Katanga Gauss zone D,-6.32;21.74;-11.72;25.51
 3991,P,Puerto Rico State Plane CS of 1927,18.57;-67.97;17.87;-65.19
 3992,P,Puerto Rico / St. Croix,18.44;-65.09;17.62;-64.51
-3993,P,Guam 1963 / Guam SPCS,13.7;144.58;13.18;145.01
 3994,P,WGS 84 / Mercator 41,-25;155;-60;-169.99
 3995,P,WGS 84 / Arctic Polar Stereographic,90;-180;60;180
 3996,P,WGS 84 / IBCAO Polar Stereographic,90;-180;60;180
@@ -1815,9 +1794,6 @@
 4133,G,EST92,59.75;21.74;57.52;28.2
 4134,G,PSD93,26.58;51.99;16.59;59.91
 4135,G,Old Hawaiian,22.29;-160.3;18.87;-154.74
-4136,G,St. Lawrence Island,63.84;-171.97;62.89;-168.59
-4137,G,St. Paul Island,57.28;-170.51;57.06;-170.04
-4138,G,St. George Island,56.67;-169.88;56.49;-169.38
 4139,G,Puerto Rico,18.78;-67.97;17.62;-64.25
 4141,G,Israel 1993,33.28;34.17;29.45;35.69
 4142,G,Locodjo 1965,10.74;-8.61;1.02;-2.48
@@ -2133,7 +2109,6 @@
 4587,P,New Beijing / Gauss-Kruger CM 123E,53.56;120;26.34;126
 4588,P,New Beijing / Gauss-Kruger CM 129E,52.79;126;40.89;132
 4589,P,New Beijing / Gauss-Kruger CM 135E,48.4;132;45.02;134.77
-4600,G,Anguilla 1957,18.33;-63.22;18.11;-62.92
 4601,G,Antigua 1943,17.22;-61.95;16.94;-61.61
 4602,G,Dominica 1945,15.69;-61.55;15.14;-61.2
 4603,G,Grenada 1953,12.57;-61.84;11.94;-61.35
@@ -2199,7 +2174,6 @@
 4672,G,Chatham Islands 1971,-43.3;-177.25;-44.64;-175.54
 4673,G,Chatham Islands 1979,-43.3;-177.25;-44.64;-175.54
 4674,G,SIRGAS 2000,32.72;-122.19;-59.87;-25.28
-4675,G,Guam 1963,20.61;144.58;13.18;146.12
 4676,G,Vientiane 1982,22.5;100.09;13.92;107.64
 4677,G,Lao 1993,22.5;100.09;13.92;107.64
 4678,G,Lao 1997,22.5;100.09;13.92;107.64
@@ -2353,7 +2327,6 @@
 5014,P,PTRA08 / UTM zone 25N,43.07;-35.58;35.25;-30
 5015,P,PTRA08 / UTM zone 26N,42.96;-30;33.52;-24
 5016,P,PTRA08 / UTM zone 28N,36.46;-18;29.24;-12.48
-5017,P,Lisbon 1890 / Portugal Bonne New,42.16;-9.56;36.95;-6.19
 5018,P,Lisbon / Portuguese Grid New,42.16;-9.56;36.95;-6.19
 5041,P,WGS 84 / UPS North (E;N),90;-180;60;180
 5042,P,WGS 84 / UPS South (E;N),-60;-180;-90;180
@@ -2413,8 +2386,6 @@
 5188,P,Korea 2000 / East Sea Belt 2010,37.62;130.71;37.39;131.01
 5221,P,S-JTSK (Ferro) / Krovak East North,51.06;12.09;47.73;22.56
 5223,P,WGS 84 / Gabon TM,2.32;8.65;-3.98;14.52
-5224,P,S-JTSK/05 (Ferro) / Modified Krovak,51.06;12.09;48.58;18.86
-5225,P,S-JTSK/05 (Ferro) / Modified Krovak East North,51.06;12.09;48.58;18.86
 5228,G,S-JTSK/05,51.06;12.09;48.58;18.86
 5229,G,S-JTSK/05 (Ferro),51.06;12.09;48.58;18.86
 5233,G,SLD99,9.88;79.64;5.86;81.95
@@ -2515,8 +2486,6 @@
 5490,P,RGAF09 / UTM zone 20N,18.31;-63.66;14.08;-60
 5513,P,S-JTSK / Krovak,51.06;12.09;47.73;22.56
 5514,P,S-JTSK / Krovak East North,51.06;12.09;47.73;22.56
-5515,P,S-JTSK/05 / Modified Krovak,51.06;12.09;48.58;18.86
-5516,P,S-JTSK/05 / Modified Krovak East North,51.06;12.09;48.58;18.86
 5518,P,CI1971 / Chatham Islands Map Grid,-43.3;-177.25;-44.64;-175.54
 5519,P,CI1979 / Chatham Islands Map Grid,-43.3;-177.25;-44.64;-175.54
 5520,P,DHDN / 3-degree Gauss-Kruger zone 1,55.92;3.34;55.24;4.5
@@ -2723,38 +2692,6 @@
 6207,G,Nepal 1981,30.43;80.06;26.34;88.21
 6210,P,SIRGAS 2000 / UTM zone 23N,5.13;-48;0;-41.99
 6211,P,SIRGAS 2000 / UTM zone 24N,0.74;-42;0;-38.22
-6244,P,MAGNA-SIRGAS / Arauca urban grid,7.1;-70.78;7.05;-70.71
-6245,P,MAGNA-SIRGAS / Armenia urban grid,4.55;-75.73;4.5;-75.65
-6246,P,MAGNA-SIRGAS / Barranquilla urban grid,11.06;-74.87;10.85;-74.75
-6247,P,MAGNA-SIRGAS / Bogota urban grid,4.85;-74.27;4.45;-73.98
-6248,P,MAGNA-SIRGAS / Bucaramanga urban grid,7.17;-73.19;7.03;-73.06
-6249,P,MAGNA-SIRGAS / Cali urban grid,3.56;-76.61;3.32;-76.42
-6250,P,MAGNA-SIRGAS / Cartagena urban grid,10.47;-75.57;10.27;-75.42
-6251,P,MAGNA-SIRGAS / Cucuta urban grid,7.97;-72.56;7.81;-72.46
-6252,P,MAGNA-SIRGAS / Florencia urban grid,1.65;-75.63;1.57;-75.59
-6253,P,MAGNA-SIRGAS / Ibague urban grid,4.47;-75.27;4.39;-75.11
-6254,P,MAGNA-SIRGAS / Inirida urban grid,3.9;-67.94;3.8;-67.88
-6255,P,MAGNA-SIRGAS / Leticia urban grid,-4.17;-69.98;-4.23;-69.92
-6256,P,MAGNA-SIRGAS / Manizales urban grid,5.11;-75.54;5.02;-75.44
-6257,P,MAGNA-SIRGAS / Medellin urban grid,6.37;-75.66;6.12;-75.5
-6258,P,MAGNA-SIRGAS / Mitu urban grid,1.29;-70.25;1.23;-70.21
-6259,P,MAGNA-SIRGAS / Mocoa urban grid,1.18;-76.66;1.12;-76.63
-6260,P,MAGNA-SIRGAS / Monteria urban grid,8.81;-75.94;8.7;-75.82
-6261,P,MAGNA-SIRGAS / Neiva urban grid,2.99;-75.32;2.87;-75.23
-6262,P,MAGNA-SIRGAS / Pasto urban grid,1.26;-77.32;1.16;-77.23
-6263,P,MAGNA-SIRGAS / Pereira urban grid,4.87;-75.77;4.78;-75.64
-6264,P,MAGNA-SIRGAS / Popayan urban grid,2.49;-76.65;2.41;-76.55
-6265,P,MAGNA-SIRGAS / Puerto Carreno urban grid,6.3;-67.7;5.98;-67.41
-6266,P,MAGNA-SIRGAS / Quibdo urban grid,5.72;-76.68;5.66;-76.63
-6267,P,MAGNA-SIRGAS / Riohacha urban grid,11.58;-72.96;11.42;-72.84
-6268,P,MAGNA-SIRGAS / San Andres urban grid,12.65;-81.82;12.43;-81.6
-6269,P,MAGNA-SIRGAS / San Jose del Guaviare urban grid,2.61;-72.66;2.54;-72.6
-6270,P,MAGNA-SIRGAS / Santa Marta urban grid,11.3;-74.24;11.16;-74.13
-6271,P,MAGNA-SIRGAS / Sucre urban grid,8.83;-74.74;8.79;-74.69
-6272,P,MAGNA-SIRGAS / Tunja urban grid,5.61;-73.39;5.5;-73.3
-6273,P,MAGNA-SIRGAS / Valledupar urban grid,10.51;-73.3;10.39;-73.19
-6274,P,MAGNA-SIRGAS / Villavicencio urban grid,4.21;-73.69;4.07;-73.56
-6275,P,MAGNA-SIRGAS / Yopal urban grid,5.37;-72.43;5.3;-72.35
 6307,P,NAD83(CORS96) / Puerto Rico and Virgin Is.,18.57;-67.97;17.62;-64.51
 6311,G,CGRS93,35.74;32.2;34.59;34.65
 6312,P,CGRS93 / Cyprus Local Transverse Mercator,35.74;32.2;34.59;34.65
@@ -3793,7 +3730,6 @@
 8428,G,Macao 1920,22.23;113.52;22.06;113.68
 8431,G,Macao 2008,22.23;113.52;22.06;113.68
 8433,P,Macao 1920 / Macao Grid,22.23;113.52;22.06;113.68
-8441,P,Tananarive / Laborde Grid,-11.89;43.18;-25.64;50.56
 8455,P,RGTAAF07 / UTM zone 53S,-65.61;136;-66.73;138.01
 8456,P,RGTAAF07 / UTM zone 54S,-66.1;138;-67.13;142
 8518,P,NAD83(2011) / KS RCS zone 1,40.01;-102.06;38.69;-101.38
@@ -3835,9 +3771,6 @@
 8838,P,MTRF-2000 / UTM zone 38N,31.15;41.99;16.35;48
 8839,P,MTRF-2000 / UTM zone 39N,28.94;47.99;17.94;54.01
 8840,P,MTRF-2000 / UTM zone 40N,22.77;54;19.66;55.67
-8857,P,WGS 84 / Equal Earth Greenwich,-
-8858,P,WGS 84 / Equal Earth Americas,90;90.01;-90;89.99
-8859,P,WGS 84 / Equal Earth Asia-Pacific,90;-29.99;-90;-30.01
 8860,G,NAD83(FBN),49.38;144.58;-14.59;-64.51
 8888,G,WGS 84 (Transit),-
 8900,G,RGWF96,-9.84;179.49;-15.94;-174.27
@@ -4000,7 +3933,6 @@
 9494,P,SRGI2013 / UTM zone 54S,0;138;-10.84;141.46
 9498,P,POSGAR 2007 / CABA 2019,-34.5;-58.54;-34.71;-58.29
 9547,G,LTF2004(G),45.89;4.65;44.87;7.88
-9549,P,LTF2004(C),45.89;4.65;44.87;7.88
 9674,P,NAD83 / USFS R6 Albers,49.05;-124.79;41.98;-116.47
 9678,P,Gulshan 303 / Bangladesh Transverse Mercator,26.64;88.01;20.52;92.67
 9680,P,WGS 84 / TM 90 NE,26.64;88.01;18.56;92.67
@@ -4124,10 +4056,8 @@
 20033,G,MWC18-IRF,53.65;-3.15;53.09;-2.1
 20041,G,SIRGAS-Chile 2021,-17.5;-113.21;-59.87;-65.72
 20042,P,SIRGAS-Chile 2021 / UTM zone 12S,-23.72;-113.21;-30.54;-108
-20047,P,GDA2020 / BCSG2020,-24.64;152.37;-29.36;153.69
 20048,P,SIRGAS-Chile 2021 / UTM zone 18S,-18.35;-78;-59.36;-71.99
 20049,P,SIRGAS-Chile 2021 / UTM zone 19S,-17.5;-72;-59.87;-66
-20050,P,NAD83(2011) / Amtrak NECCS21 (ft),42.74;-78.51;38.64;-70.48
 20062,P,Pulkovo 1995 GK Zone 2N,54.18;9.93;50.21;12
 20063,P,Pulkovo 1995 GK Zone 3N,54.89;12;45.78;18
 20135,P,Adindan / UTM zone 35N,22.01;23.99;4.21;30.01
@@ -4451,7 +4381,6 @@
 22289,P,Cape / Lo29,-22.13;27.99;-33.03;30.01
 22291,P,Cape / Lo31,-22.22;29.99;-31.38;32.02
 22293,P,Cape / Lo33,-26.8;31.95;-28.94;32.95
-22300,P,Carthage (Paris) / Tunisia Mining Grid,37.4;7.49;30.23;11.59
 22307,P,NAD83(CSRS)v3 / UTM zone 7N,72.53;-141.01;52.05;-138
 22308,P,NAD83(CSRS)v3 / UTM zone 8N,79.42;-138;48.06;-132
 22309,P,NAD83(CSRS)v3 / UTM zone 9N,80.93;-132;46.52;-126
@@ -4541,7 +4470,6 @@
 22655,P,NAD83(CSRS)v6 / MTM zone 15,56.9;-91.5;47.97;-88.5
 22656,P,NAD83(CSRS)v6 / MTM zone 16,55.2;-94.5;48.06;-91.5
 22657,P,NAD83(CSRS)v6 / MTM zone 17,53.24;-95.16;48.69;-94.5
-22700,P,Deir ez Zor / Levant Zone,37.3;35.04;32.31;42.38
 22707,P,NAD83(CSRS)v7 / UTM zone 7N,72.53;-141.01;52.05;-138
 22708,P,NAD83(CSRS)v7 / UTM zone 8N,79.42;-138;48.06;-132
 22709,P,NAD83(CSRS)v7 / UTM zone 9N,80.93;-132;46.52;-126
@@ -5057,7 +4985,6 @@
 29381,P,Schwarzeck / Lo22/21,-17.85;19.99;-22.01;22
 29383,P,Schwarzeck / Lo22/23,-17.52;21.99;-18.49;24
 29385,P,Schwarzeck / Lo22/25,-17.47;24;-18.18;25.27
-29701,P,Tananarive (Paris) / Laborde Grid,-11.89;43.18;-25.64;50.56
 29702,P,Tananarive (Paris) / Laborde Grid approximation,-11.89;43.18;-25.64;50.56
 29738,P,Tananarive / UTM zone 38S,-13;42.53;-26.59;48
 29739,P,Tananarive / UTM zone 39S,-11.69;48;-24.21;51.03
@@ -5563,7 +5490,6 @@
 32558,P,WGS 72BE / UTM zone 58S,0;162;-80;168
 32559,P,WGS 72BE / UTM zone 59S,0;168;-80;174
 32560,P,WGS 72BE / UTM zone 60S,0;174;-80;180
-32600,P,WGS 84 / UTM grid system (northern hemisphere),84;-180;0;180
 32601,P,WGS 84 / UTM zone 1N,84;-180;0;-174
 32602,P,WGS 84 / UTM zone 2N,84;-174;0;-168
 32603,P,WGS 84 / UTM zone 3N,84;-168;0;-162
@@ -5629,7 +5555,6 @@
 32665,P,WGS 84 / BLM 15N (ftUS),29.73;-96;25.61;-89.86
 32666,P,WGS 84 / BLM 16N (ftUS),30.25;-90.01;23.95;-83.91
 32667,P,WGS 84 / BLM 17N (ftUS),29.94;-84.09;23.82;-81.17
-32700,P,WGS 84 / UTM grid system (southern hemisphere),0;-180;-80;180
 32701,P,WGS 84 / UTM zone 1S,0;-180;-80;-174
 32702,P,WGS 84 / UTM zone 2S,0;-174;-80;-168
 32703,P,WGS 84 / UTM zone 3S,0;-168;-80;-162
@@ -5713,128 +5638,41 @@
 37249,G,Sao Braz,37.96;-25.92;36.87;-24.62
 37257,G,S-42 Hungary,48.58;16.11;45.74;22.9
 37260,G,Alaskan Islands,71.4;172.42;51.3;-129.99
-41001,P,WGS84 / Simple Mercator,0;0;0;0
-42101,P,WGS 84 / LCC Canada,0;0;0;0
-42102,P,NAD83 / BC Albers,0;0;0;0
-42103,P,WGS 84 / LCC USA,0;0;0;0
-42104,P,NAD83 / MTM zone 8 Qu├®bec,0;0;0;0
-42105,P,WGS84 / Merc NorthAm,0;0;0;0
-42106,P,WGS84 / Lambert Azim Mozambique,0;0;0;0
-42301,P,NAD27 / Polar Stereographic / CM=-98,0;0;0;0
-42302,P,JapanOrtho.09 09,0;0;0;0
-42303,P,NAD83 / Albers NorthAm,0;0;0;0
-42304,P,NAD83 / NRCan LCC Canada,0;0;0;0
-42305,P,France_II,0;0;0;0
-42306,P,NAD83/QC_LCC,0;0;0;0
-42307,P,NAD83 / Texas Central - feet,0;0;0;0
-42308,P,NAD27 / California Albers,0;0;0;0
-42309,P,NAD 83 / LCC Canada AVHRR-2,0;0;0;0
-42310,P,WGS84+GRS80 / Mercator,0;0;0;0
-42311,P,NAD83 / LCC Statcan,0;0;0;0
 53001,P,Plate Carree,-
 53002,P,Equidistant Cyl.,-
 53003,P,Miller Cylindrical,-
 53004,P,Mercator,-
 53008,P,Sinusoidal,-
 53009,P,Mollweide,-
-53010,P,Eckert VI,-
-53011,P,Eckert V,-
-53012,P,Eckert IV,-
-53013,P,Eckert III,-
-53014,P,Eckert II,-
-53015,P,Eckert I,-
-53016,P,Gall Stereographic,-
 53017,P,Behrmann,-
-53018,P,Winkel I,-
-53019,P,Winkel II,-
 53021,P,Polyconic,-
-53022,P,Quartic Authalic,-
-53023,P,Loximuthal,-
-53024,P,Bonne,-
 53025,P,Hotine,-
 53026,P,Stereographic,-
 53027,P,Equidistant Conic,-
 53028,P,Cassini,-
 53029,P,Van der Grinten I,-
 53030,P,Robinson,-
-53031,P,Two-Point Equidistant,-
 53032,P,Azimuthal Equidistant,-
 53034,P,Cylindrical Equal Area,-
-53035,P,Equal Earth Greenwich,-
-53036,P,Equal Earth Americas,-
-53037,P,Equal Earth Asia-Pacific,-
-53042,P,Winkel Tripel (NGS version),-
-53043,P,Aitoff,-
-53044,P,Hammer-Aitoff,-
-53045,P,Flat Polar Quartic,-
-53046,P,Craster Parabolic,-
-53048,P,Times,-
-53049,P,Vertical Near-Side Perspective (Geosynchronous Orbit),-
-53074,P,Wagner IV,-
-53075,P,Wagner V,-
-53076,P,Wagner VII,-
-53077,P,Natural Earth,-
-53078,P,Natural Earth II,-
-53079,P,Patterson,-
-53080,P,Compact Miller,-
 54001,P,Plate Carree,-
 54002,P,Equidistant Cyl.,-
 54003,P,Miller Cylindrical,-
 54004,P,Mercator,-
 54008,P,Sinusoidal,-
 54009,P,Mollweide,-
-54010,P,Eckert VI,-
-54011,P,Eckert V,-
-54012,P,Eckert IV,-
-54013,P,Eckert III,-
-54014,P,Eckert II,-
-54015,P,Eckert I,-
-54016,P,Gall Stereographic,-
 54017,P,Behrmann,-
-54018,P,Winkel I,-
-54019,P,Winkel II,-
 54021,P,Polyconic,-
-54022,P,Quartic Authalic,-
-54023,P,Loximuthal,-
-54024,P,Bonne,-
 54025,P,Hotine,-
 54026,P,Stereographic,-
 54027,P,Equidistant Conic,-
 54028,P,Cassini,-
 54029,P,Van der Grinten I,-
 54030,P,Robinson,-
-54031,P,Two-Point Equidistant,-
 54032,P,Azimuthal Equidistant,-
 54034,P,Cylindrical Equal Area,-
-54042,P,Winkel Tripel (NGS version),-
-54043,P,Aitoff,-
-54044,P,Hammer-Aitoff,-
-54045,P,Flat Polar Quartic,-
-54046,P,Craster Parabolic,-
-54048,P,Times,-
-54049,P,Vertical Near-Side Perspective (Geosynchronous Orbit),-
-54050,P,Fuller,-
-54051,P,Cube,-
-54052,P,Goode Homolosine - Land,-
-54053,P,Goode Homolosine - Ocean,-
-54074,P,Wagner IV,-
-54075,P,Wagner V,-
-54076,P,Wagner VII,-
-54077,P,Natural Earth,-
-54078,P,Natural Earth II,-
-54079,P,Patterson,-
-54080,P,Compact Miller,-
-54090,P,Peirce quincuncial North Pole in a square,-
-54091,P,Peirce quincuncial North Pole in a diamond,-
-54098,P,Adams Square II,-
-54099,P,Spilhaus World Ocean Map in a Square,-
-54100,P,Tobler Cylindrical I,-
-54101,P,Tobler Cylindrical II,-
 65061,P,NAD 1927 SPCS Zone Guam,15.91;141.19;10.95;148.18
 65062,P,American Samoa 1962 SPCS American Samoa,-10.02;-173.75;-17.56;-165.2
 65161,P,NAD 1983 SPCS Zone Guam,15.91;141.19;10.95;148.18
-100001,G,NAD83 / NFIS Seconds,0;0;0;0
-100002,P,NAD83 / Austin,0;0;0;0
 102001,P,NAD 1983 Albers Canada,86.46;-141.01;38.21;-40.73
 102002,P,NAD 1983 Lambert Canada,86.46;-141.01;38.21;-40.73
 102003,P,NAD 1983 Albers contiguous USA,49.38;-124.79;24.41;-66.91
@@ -5937,7 +5775,6 @@
 102160,P,Datum 73 Hayford Gauss IGeoE,43.07;-35.58;29.24;-6.19
 102161,P,Datum 73 Hayford Gauss IPCC,43.07;-35.58;29.24;-6.19
 102162,P,Graciosa Base SW 1948 UTM Zone 26N,39.14;-28.9;38.32;-26.97
-102163,P,Lisboa Bessel Bonne,43.07;-35.58;29.24;-6.19
 102164,P,Lisboa Hayford Gauss IGeoE,43.07;-35.58;29.24;-6.19
 102165,P,Lisboa Hayford Gauss IPCC,43.07;-35.58;29.24;-6.19
 102166,P,Observ Meteorologico 1939 UTM Zone 25N,39.77;-31.34;39.3;-31.02
@@ -5981,7 +5818,6 @@
 102239,P,Guam 1963 TNet,15.91;141.19;10.95;148.18
 102240,P,Guam 1993 Net,15.91;141.19;10.95;148.18
 102247,P,NAD 1983 (CORS96) Alaska Albers,71.4;172.42;51.3;-129.99
-102299,P,Berghaus Star AAG,-
 102306,P,Nepal Nagarkot TM,30.43;80.06;26.34;88.21
 102319,P,CGRS 1993 LTM,35.74;32.2;34.59;34.65
 102328,P,ETRS 1989 UTM Zone 32N 7Stellen,55.9;5.5;47.27;12
@@ -6064,7 +5900,6 @@
 102457,P,PRS 1992 UTM Zone 51N,24;120;3;126
 102458,P,PRS 1992 UTM Zone 52N,20;126;4;132
 102459,P,NAD 1983 Idaho - Ada County,43.85;-116.6;43;-115.94
-102460,P,Hartsfield-Jackson Atlanta Intl Airport,33.68427937;-84.502368;33.590879;-84.351204
 102461,P,NAD 1983 HARN SPCS Hawaii Zone 1 (US Feet),20.33;-156.1;18.87;-154.74
 102462,P,NAD 1983 HARN SPCS Hawaii Zone 2 (US Feet),21.26;-157.36;20.45;-155.93
 102464,P,NAD 1983 HARN SPCS Hawaii Zone 4 (US Feet),22.29;-159.85;21.81;-159.23
