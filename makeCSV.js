@@ -19,6 +19,8 @@ for (let crs of Object.values(all)) {
       //console.error("Error with " + crs.code);
       //console.error(e);
     }
+
+    if (!crs.unit) valid = false;
     
     if (valid) {
       let bounds = crs.bbox;
