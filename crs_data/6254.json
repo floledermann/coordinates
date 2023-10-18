@@ -1,0 +1,1 @@
+{"code":"6254","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Inirida urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=3.84543818333333 +lon_0=-67.9052320888889 +x_0=1019177.687 +y_0=491791.326 +h_0=96 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[3.9,-67.94,3.8,-67.88],"unit":"metre","area":"Colombia - Inirida city.","accuracy":1}

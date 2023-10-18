@@ -1,0 +1,1 @@
+{"code":"6274","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Villavicencio urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=4.1553751 +lon_0=-73.6244859861111 +x_0=1050678.757 +y_0=950952.124 +h_0=427.19 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[4.21,-73.69,4.07,-73.56],"unit":"metre","area":"Colombia - Villavicencio city.","accuracy":1}

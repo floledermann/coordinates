@@ -1,0 +1,1 @@
+{"code":"6246","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Barranquilla urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=10.9231830833333 +lon_0=-74.8343313333333 +x_0=917264.406 +y_0=1699839.935 +h_0=100 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[11.06,-74.87,10.85,-74.75],"unit":"metre","area":"Colombia - Barranquilla city.","accuracy":1}

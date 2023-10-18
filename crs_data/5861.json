@@ -1,0 +1,1 @@
+{"code":"5861","kind":"CRS-VERTCRS","name":"LAT depth","wkt":"VERT_CS[\"LAT depth\",VERT_DATUM[\"Lowest Astronomical Tide\",2005,AUTHORITY[\"EPSG\",\"1080\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"5861\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

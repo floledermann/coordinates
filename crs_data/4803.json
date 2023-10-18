@@ -1,0 +1,1 @@
+{"code":"4803","kind":"CRS-GEOGCRS","name":"Lisbon (Lisbon)","wkt":null,"proj4":"+proj=longlat +ellps=intl +pm=lisbon +no_defs +type=crs","bbox":[42.16,-9.56,36.95,-6.19],"unit":"degree (supplier to define representation)","area":"Portugal - mainland - onshore.","accuracy":null}

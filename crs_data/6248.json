@@ -1,0 +1,1 @@
+{"code":"6248","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Bucaramanga urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=7.07888714166667 +lon_0=-73.1973432222222 +x_0=1097241.305 +y_0=1274642.278 +h_0=931 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[7.17,-73.19,7.03,-73.06],"unit":"metre","area":"Colombia - Bucaramanga city.","accuracy":1}

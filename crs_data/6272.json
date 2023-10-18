@@ -1,0 +1,1 @@
+{"code":"6272","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Tunja urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=5.53419473888889 +lon_0=-73.3519389 +x_0=1080514.91 +y_0=1103772.028 +h_0=2800 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[5.61,-73.39,5.5,-73.3],"unit":"metre","area":"Colombia - Tunja city.","accuracy":1}

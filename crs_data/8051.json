@@ -1,0 +1,1 @@
+{"code":"8051","kind":"CRS-VERTCRS","name":"MSL depth (ft)","wkt":"VERT_CS[\"MSL depth (ft)\",VERT_DATUM[\"Mean Sea Level\",2005,AUTHORITY[\"EPSG\",\"5100\"]],UNIT[\"foot\",0.3048,AUTHORITY[\"EPSG\",\"9002\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"8051\"]]","proj4":"+vunits=ft +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"foot","area":"World.","accuracy":null}

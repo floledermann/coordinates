@@ -1,0 +1,1 @@
+{"code":"6249","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Cali urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=3.44188333333333 +lon_0=-76.5205625 +x_0=1061900.18 +y_0=872364.63 +h_0=1000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[3.56,-76.61,3.32,-76.42],"unit":"metre","area":"Colombia - Cali city.","accuracy":1}

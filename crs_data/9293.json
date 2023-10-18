@@ -1,0 +1,1 @@
+{"code":"9293","kind":"CRS-GEOG3DCRS","name":"ONGD17","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +towgs84=1.16835,-1.42001,-2.24431,0.00822,0.05508,-0.01818,0.23388 +no_defs +type=crs","bbox":[26.74,51.99,14.33,63.38],"unit":"degree (supplier to define representation)","area":"Oman - onshore and offshore.","accuracy":0.1}

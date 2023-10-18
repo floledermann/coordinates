@@ -1,0 +1,1 @@
+{"code":"27564","kind":"CRS-PROJCRS","name":"NTF (Paris) / Lambert Corse","wkt":null,"proj4":"+proj=lcc +lat_1=42.1649999999998 +lat_0=42.1649999999998 +lon_0=0 +k_0=0.99994471 +x_0=234.358 +y_0=185861.369 +ellps=clrk80ign +pm=paris +units=m +no_defs +type=crs","bbox":[43.07,8.5,41.31,9.63],"unit":"metre","area":"France - Corsica onshore.","accuracy":null}

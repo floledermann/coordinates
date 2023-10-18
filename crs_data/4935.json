@@ -1,0 +1,1 @@
+{"code":"4935","kind":"CRS-GEOG3DCRS","name":"EST97","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[60,20.37,57.52,28.2],"unit":"degree (supplier to define representation)","area":"Estonia - onshore and offshore.","accuracy":null}

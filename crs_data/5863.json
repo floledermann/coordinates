@@ -1,0 +1,1 @@
+{"code":"5863","kind":"CRS-VERTCRS","name":"ISLW depth","wkt":"VERT_CS[\"ISLW depth\",VERT_DATUM[\"Indian Spring Low Water\",2005,AUTHORITY[\"EPSG\",\"1085\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"5863\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

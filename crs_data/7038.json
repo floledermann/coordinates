@@ -1,0 +1,1 @@
+{"code":"7038","kind":"CRS-GEOG3DCRS","name":"RGM04 (lon-lat)","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[-11.33,43.68,-14.49,46.7],"unit":"degree (supplier to define representation)","area":"Mayotte - onshore and offshore.","accuracy":null}

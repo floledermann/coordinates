@@ -1,0 +1,1 @@
+{"code":"9013","kind":"CRS-GEOG3DCRS","name":"IGS08","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +towgs84=-0.214,0.119,0.156,-0.01182,0.00811,-0.01677,-0.0059 +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"degree (supplier to define representation)","area":"World.","accuracy":0.05}

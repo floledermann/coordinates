@@ -1,0 +1,1 @@
+{"code":"4985","kind":"CRS-GEOG3DCRS","name":"WGS 72","wkt":null,"proj4":"+proj=longlat +ellps=WGS72 +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"degree (supplier to define representation)","area":"World.","accuracy":null}

@@ -1,0 +1,1 @@
+{"code":"4807","kind":"CRS-GEOGCRS","name":"NTF (Paris)","wkt":null,"proj4":"+proj=longlat +ellps=clrk80ign +pm=paris +no_defs +type=crs","bbox":[51.14,-4.87,41.31,9.63],"unit":"grad","area":"France - onshore - mainland and Corsica.","accuracy":null}

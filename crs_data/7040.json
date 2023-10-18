@@ -1,0 +1,1 @@
+{"code":"7040","kind":"CRS-GEOG3DCRS","name":"RGFG95 (lon-lat)","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[8.88,-54.61,2.11,-49.45],"unit":"degree (supplier to define representation)","area":"French Guiana - onshore and offshore.","accuracy":null}

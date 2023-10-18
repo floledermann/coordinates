@@ -1,0 +1,1 @@
+{"code":"6256","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Manizales urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=5.06815388888889 +lon_0=-75.5110947222222 +x_0=1173727.04 +y_0=1052391.13 +h_0=2100 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[5.11,-75.54,5.02,-75.44],"unit":"metre","area":"Colombia - Manizales city.","accuracy":1}

@@ -1,0 +1,1 @@
+{"code":"4931","kind":"CRS-GEOG3DCRS","name":"Australian Antarctic","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[-60,45,-90,160],"unit":"degree (supplier to define representation)","area":"Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.","accuracy":null}

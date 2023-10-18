@@ -1,0 +1,1 @@
+{"code":"5868","kind":"CRS-VERTCRS","name":"MHW height","wkt":"VERT_CS[\"MHW height\",VERT_DATUM[\"Mean High Water\",2005,AUTHORITY[\"EPSG\",\"1092\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5868\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

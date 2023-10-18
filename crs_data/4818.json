@@ -1,0 +1,1 @@
+{"code":"4818","kind":"CRS-GEOGCRS","name":"S-JTSK (Ferro)","wkt":null,"proj4":"+proj=longlat +ellps=bessel +pm=ferro +no_defs +type=crs","bbox":[51.06,12.09,47.73,22.56],"unit":"degree (supplier to define representation)","area":"Czechia; Slovakia.","accuracy":null}

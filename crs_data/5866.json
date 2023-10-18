@@ -1,0 +1,1 @@
+{"code":"5866","kind":"CRS-VERTCRS","name":"MLLW depth","wkt":"VERT_CS[\"MLLW depth\",VERT_DATUM[\"Mean Lower Low Water\",2005,AUTHORITY[\"EPSG\",\"1089\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"5866\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

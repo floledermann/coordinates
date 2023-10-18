@@ -1,0 +1,1 @@
+{"code":"4805","kind":"CRS-GEOGCRS","name":"MGI (Ferro)","wkt":null,"proj4":"+proj=longlat +ellps=bessel +pm=ferro +no_defs +type=crs","bbox":[49.02,9.53,40.85,23.04],"unit":"degree (supplier to define representation)","area":"Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia. Serbia. Slovenia - onshore.","accuracy":1}

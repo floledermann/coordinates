@@ -1,0 +1,1 @@
+{"code":"7908","kind":"CRS-GEOG3DCRS","name":"ITRF97","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +towgs84=-14.63,-27.62,-25.32,-1.7893,-0.6047,0.9962,6.695 +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"degree (supplier to define representation)","area":"World.","accuracy":0.18}

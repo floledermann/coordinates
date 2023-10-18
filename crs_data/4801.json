@@ -1,0 +1,1 @@
+{"code":"4801","kind":"CRS-GEOGCRS","name":"Bern 1898 (Bern)","wkt":null,"proj4":"+proj=longlat +ellps=bessel +pm=bern +no_defs +type=crs","bbox":[47.81,5.96,45.82,10.49],"unit":"degree (supplier to define representation)","area":"Liechtenstein; Switzerland.","accuracy":null}

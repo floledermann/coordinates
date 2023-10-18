@@ -1,0 +1,1 @@
+{"code":"4904","kind":"CRS-GEOGCRS","name":"Lisbon 1890 (Lisbon)","wkt":null,"proj4":"+proj=longlat +ellps=bessel +pm=lisbon +no_defs +type=crs","bbox":[42.16,-9.56,36.95,-6.19],"unit":"degree (supplier to define representation)","area":"Portugal - mainland - onshore.","accuracy":null}

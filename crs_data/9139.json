@@ -1,0 +1,1 @@
+{"code":"9139","kind":"CRS-GEOG3DCRS","name":"KOSOVAREF01","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[43.25,19.97,41.85,21.8],"unit":"degree (supplier to define representation)","area":"Kosovo.","accuracy":null}

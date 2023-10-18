@@ -1,0 +1,1 @@
+{"code":"7034","kind":"CRS-GEOG3DCRS","name":"RGSPM06 (lon-lat)","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[47.37,-57.1,43.41,-55.9],"unit":"degree (supplier to define representation)","area":"St Pierre and Miquelon - onshore and offshore.","accuracy":null}

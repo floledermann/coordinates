@@ -1,0 +1,1 @@
+{"code":"5873","kind":"CRS-VERTCRS","name":"Low Water depth","wkt":"VERT_CS[\"Low Water depth\",VERT_DATUM[\"Low Water\",2005,AUTHORITY[\"EPSG\",\"1093\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"5873\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

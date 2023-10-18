@@ -1,0 +1,1 @@
+{"code":"9778","kind":"CRS-GEOG3DCRS","name":"RGF93 v2 (lon-lat)","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[51.56,-9.86,41.15,10.38],"unit":"degree (supplier to define representation)","area":"France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).","accuracy":null}

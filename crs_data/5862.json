@@ -1,0 +1,1 @@
+{"code":"5862","kind":"CRS-VERTCRS","name":"LLWLT depth","wkt":"VERT_CS[\"LLWLT depth\",VERT_DATUM[\"Lower Low Water Large Tide\",2005,AUTHORITY[\"EPSG\",\"1083\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Depth\",DOWN],AUTHORITY[\"EPSG\",\"5862\"]]","proj4":"+vunits=m +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"metre","area":"World.","accuracy":null}

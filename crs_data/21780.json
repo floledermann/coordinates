@@ -1,0 +1,1 @@
+{"code":"21780","kind":"CRS-PROJCRS","name":"Bern 1898 (Bern) / LV03C","wkt":null,"proj4":"+proj=somerc +lat_0=46.9524055555556 +lon_0=0 +k_0=1 +x_0=0 +y_0=0 +ellps=bessel +pm=bern +units=m +no_defs +type=crs","bbox":[47.81,5.96,45.82,10.49],"unit":"metre","area":"Liechtenstein; Switzerland.","accuracy":null}

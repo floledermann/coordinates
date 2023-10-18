@@ -1,0 +1,1 @@
+{"code":"8544","kind":"CRS-GEOG3DCRS","name":"NAD83(HARN Corrected)","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[18.57,-67.97,17.62,-64.51],"unit":"degree (supplier to define representation)","area":"Puerto Rico and US Virgin Islands - onshore.","accuracy":null}

@@ -1,0 +1,1 @@
+{"code":"8859","kind":"CRS-PROJCRS","name":"WGS 84 / Equal Earth Asia-Pacific","wkt":null,"proj4":"+proj=eqearth +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs","bbox":[90,-29.99,-90,-30.01],"unit":"metre","area":"World centred on Asia-Pacific.","accuracy":null}

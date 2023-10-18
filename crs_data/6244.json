@@ -1,0 +1,1 @@
+{"code":"6244","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / Arauca urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=7.08760639166667 +lon_0=-70.7583096555555 +x_0=1035263.443 +y_0=1275526.621 +h_0=100 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[7.1,-70.78,7.05,-70.71],"unit":"metre","area":"Colombia - Arauca city.","accuracy":1}

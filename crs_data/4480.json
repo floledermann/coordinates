@@ -1,0 +1,1 @@
+{"code":"4480","kind":"CRS-GEOG3DCRS","name":"China Geodetic Coordinate System 2000","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[53.56,73.62,16.7,134.77],"unit":"degree (supplier to define representation)","area":"China - onshore and offshore.","accuracy":null}

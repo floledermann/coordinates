@@ -1,0 +1,1 @@
+{"code":"27398","kind":"CRS-PROJCRS","name":"NGO 1948 (Oslo) / NGO zone VIII","wkt":null,"proj4":"+proj=tmerc +lat_0=58 +lon_0=18.3333333333333 +k=1 +x_0=0 +y_0=0 +a=6377492.018 +rf=299.1528128 +pm=oslo +units=m +no_defs +type=crs","bbox":[71.17,26.97,69.02,31.22],"unit":"metre","area":"Norway - east of 16°15'E of Oslo (26°58'22.5\"E of Greenwich).","accuracy":null}

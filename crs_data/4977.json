@@ -1,0 +1,1 @@
+{"code":"4977","kind":"CRS-GEOG3DCRS","name":"SWEREF99","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[69.07,10.03,54.96,24.17],"unit":"degree (supplier to define representation)","area":"Sweden - onshore and offshore.","accuracy":null}

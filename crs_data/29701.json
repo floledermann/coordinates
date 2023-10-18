@@ -1,0 +1,1 @@
+{"code":"29701","kind":"CRS-PROJCRS","name":"Tananarive (Paris) / Laborde Grid","wkt":null,"proj4":"+proj=labrd +lat_0=-18.9 +lon_0=44.1 +azi=18.9 +k=0.9995 +x_0=400000 +y_0=800000 +ellps=intl +pm=paris +units=m +no_defs +type=crs","bbox":[-11.89,43.18,-25.64,50.56],"unit":"metre","area":"Madagascar - onshore.","accuracy":null}

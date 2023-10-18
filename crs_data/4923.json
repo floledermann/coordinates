@@ -1,0 +1,1 @@
+{"code":"4923","kind":"CRS-GEOG3DCRS","name":"PZ-90","wkt":null,"proj4":"+proj=longlat +a=6378136 +rf=298.257839303 +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"degree (supplier to define representation)","area":"World.","accuracy":null}

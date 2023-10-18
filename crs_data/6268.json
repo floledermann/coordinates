@@ -1,0 +1,1 @@
+{"code":"6268","kind":"CRS-PROJCRS","name":"MAGNA-SIRGAS / San Andres urban grid","wkt":null,"proj4":"+proj=col_urban +lat_0=12.523794325 +lon_0=-81.72937595 +x_0=820439.298 +y_0=1877357.828 +h_0=6 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs","bbox":[12.65,-81.82,12.43,-81.6],"unit":"metre","area":"Colombia - San Andres city.","accuracy":1}

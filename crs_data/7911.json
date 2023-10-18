@@ -1,0 +1,1 @@
+{"code":"7911","kind":"CRS-GEOG3DCRS","name":"ITRF2008","wkt":null,"proj4":"+proj=longlat +ellps=GRS80 +no_defs +type=crs","bbox":[90,-180,-90,180],"unit":"degree (supplier to define representation)","area":"World.","accuracy":null}

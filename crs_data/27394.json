@@ -1,0 +1,1 @@
+{"code":"27394","kind":"CRS-PROJCRS","name":"NGO 1948 (Oslo) / NGO zone IV","wkt":null,"proj4":"+proj=tmerc +lat_0=58 +lon_0=2.5 +k=1 +x_0=0 +y_0=0 +a=6377492.018 +rf=299.1528128 +pm=oslo +units=m +no_defs +type=crs","bbox":[69.06,11.97,59.88,15.06],"unit":"metre","area":"Norway - between 1°15'E and 4°20'E of Oslo (11°58'22.5\"E and 15°03'22.5\"E of Greenwich).","accuracy":null}
