@@ -295,6 +295,11 @@ header button {
 
 <script type="module">
 
+// make sure we're running https - needed for GPS API access
+if (location.protocol !== 'https:' && !["localhost","127.0.0.1","0.0.0.0"].includes(location.hostname)) {
+  location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+
 async function importUMD(url, module = {exports:{}}) {
   return (Function('module', 'exports', await (await fetch(url)).text()).call(module, module, module.exports), module).exports;
 }
