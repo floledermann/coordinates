@@ -417,19 +417,14 @@ let displays = [];
 // for local dev
 let baseURL = "crs_data/";
 
-let initialCRS = [4326,31256];
+let initialCRS = [4326,4326];
 
 if (window.location.hash && window.location.hash.length > 4) {
-  initialCRS = window.location.hash.substring(1).split(",").map(d => +d).filter(d => d > 0);
+  initialCRS = window.location.hash.substring(1).split(",").map(d => +d || 4326).filter(d => d > 0);
 }
 
-Promise.all(initialCRS.map(d => fetch(baseURL + d + ".json").then(r => r.json()))
-/*
-[
-  fetch(baseURL + "4326.json").then(r => r.json()),
-  fetch(baseURL + "31256.json").then(r => r.json())
-]*/
-).then((dataArray) => {
+Promise.all(initialCRS.map(d => fetch(baseURL + d + ".json").then(r => r.json())))
+  .then((dataArray) => {
   //console.log(fromCRS.name);
 
   let crsDisplayTemplate = document.getElementById("crsDisplayTemplate").content.firstElementChild;
@@ -515,6 +510,14 @@ function updatePosition(pos) {
 
 function positionError(err) {
   console.log(err);
+  
+  if (geoWatchID) {
+    navigator.geolocation.clearWatch(geoWatchID);
+    geoWatchID = null;
+  }
+  document.body.classList.remove("tracking");
+  document.body.classList.add("paused");
+
 }
 
 </script>
