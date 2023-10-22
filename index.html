@@ -441,7 +441,7 @@ Promise.all(initialCRS.map(d => fetch(baseURL + d + ".json").then(r => r.json())
   for (let [index, display] of Object.entries(displays)) {
     container.appendChild(display.el);
     
-    display.el.querySelector(".crs-title").textContent = "EPSG:" + dataArray[index].code + " " + dataArray[index].name;
+    display.el.querySelector(".crs-title").textContent = /*"EPSG:" + dataArray[index].code + " " +*/ dataArray[index].name;
     
     display.el.querySelector(".show-crs-chooser").addEventListener("click", e => {
       crsChooser.show(position, (selectedCRSMeta) => {
@@ -457,7 +457,7 @@ Promise.all(initialCRS.map(d => fetch(baseURL + d + ".json").then(r => r.json())
             proj: proj(data.proj4),
             unit: data.unit
           });
-          display.el.querySelector(".crs-title").textContent = "EPSG:" + data.code + " " + data.name;
+          display.el.querySelector(".crs-title").textContent = /*"EPSG:" + data.code + " " +*/ data.name;
           updatePosition(position);
         });
       });
