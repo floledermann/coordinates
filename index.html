@@ -238,6 +238,25 @@ dialog::backdrop {
 
 .tracking .track .light {
   background-color: #00dd00;
+  box-shadow: 0 0 0.2em -0.04em #00dd00;
+}
+
+.error  .track .light {
+  animation: connecting 0.5s 3;
+  animation-timing-function: steps(6);
+  background-color: #ff3300;
+  box-shadow: 0 0 0.2em -0.04em #ff3300;
+}
+
+@keyframes connecting {
+  0%, 66% {
+    background-color: #fff197;
+    box-shadow: 0 0 0.2em 0 #fff197;
+  }
+  67%, 100% {
+    background-color: #aa0000;
+    box-shadow: none;
+  }
 }
 
 button {
@@ -290,7 +309,7 @@ footer a {
 <div class="close-button"></div>
 <form>
 <div>
-<input type="text" class="crs-search" id="crs-search" placeholder="🔍︎ Search">
+<input type="text" class="crs-search" id="crs-search" placeholder="🔍︎ Search" autocomplete="off">
 </div>
 <div class="checkbox-wrapper">
 <input type="checkbox" id="crs-bounds-only" checked> <label for="crs-bounds-only">Only include CRS defined for the current position</label>
@@ -335,10 +354,16 @@ const proj = await importUMD("proj4_2.9.0.js");
 let geoWatchID = null;
 
 document.querySelector("button.track").addEventListener("click", e => {
+
+  if (document.body.classList.contains("error")) {
+    document.body.classList.remove("error");
+    document.body.classList.add("paused");
+    return;
+  }
   
   if (!geoWatchID) {
     geoWatchID = navigator.geolocation.watchPosition(updatePosition, positionError, {
-      enableHighAccuracy: true,
+      enableHighAccuracy: false,
       maximumAge: 0
     });
     document.body.classList.remove("paused");
@@ -370,16 +395,37 @@ let crsChooser = (() => {
     chooserEl.close();
   });
   
-  chooserEl.querySelector("#crs-search").addEventListener("input", e => {
-    let str = e.target.value.toLowerCase();
+  let searchBoxEl = chooserEl.querySelector("#crs-search");
+  let boundsCheckboxEl = chooserEl.querySelector("#crs-bounds-only");
+  
+  searchBoxEl.addEventListener("input", filterName);
+  boundsCheckboxEl.addEventListener("click", filterBoundsAndName);
+  
+  function filterBoundsAndName() {
+    if (boundsCheckboxEl.checked) {
+      availableCRS = allCRS.filter(crs => 
+        position[1] < crs.bbox[0] &&
+        position[0] > crs.bbox[1] &&
+        position[1] > crs.bbox[2] &&
+        position[0] < crs.bbox[3]
+      );
+    }
+    else {
+      availableCRS = allCRS;
+    }
+    filterName();  
+  }
+  
+  function filterName() {
     if (availableCRS) {
+      let str = searchBoxEl.value.trim().toLowerCase();
       let filteredCRS = availableCRS;
       if (str) {
         filteredCRS = filteredCRS.filter(d => (d.code+"").includes(str) || d.name.toLowerCase().includes(str));
       }
       updateCRSList(filteredCRS);
     }
-  });
+  }
   
   chooserEl.addEventListener('click', event => {
     if (event.target === event.currentTarget) {
@@ -413,18 +459,11 @@ let crsChooser = (() => {
     },
     show: (position, _callback) => {
     
-      chooserEl.querySelector("#crs-search").value = "";
+      //chooserEl.querySelector("#crs-search").value = "";
       
       callback = _callback;
       
-      availableCRS = allCRS.filter(crs => 
-        position[1] < crs.bbox[0] &&
-        position[0] > crs.bbox[1] &&
-        position[1] > crs.bbox[2] &&
-        position[0] < crs.bbox[3]
-      ); //.map(crs => [crs.code,crs]));
-  
-      updateCRSList(availableCRS);
+      filterBoundsAndName();
       chooserEl.showModal();
     },
     setCRSList: crs => {
@@ -472,8 +511,8 @@ Promise.all(initialCRS.map(d => fetch(baseURL + d + ".json").then(r => r.json())
         if (!selectedCRSMeta) return;
         
         display.el.querySelector(".crs-title").textContent = "... loading data ...";
-        display.el.querySelector(".coords-east .value").textContent = "--";
-        display.el.querySelector(".coords-north .value").textContent = "--";
+        display.el.querySelector(".coords-east .value").textContent = "";
+        display.el.querySelector(".coords-north .value").textContent = "";
         
         fetch(baseURL + selectedCRSMeta.code + ".json").then(r => r.json()).then(data => {
           Object.assign(display, {
@@ -524,8 +563,10 @@ function updatePosition(pos) {
     let coords_1 = d.proj.forward(pos);
     let digits = d.unit?.startsWith("degree") ? 6 : 2;
     let unit = d.unit?.startsWith("degree") ? "°" :"";
-    d.el.querySelector(".coords-east .value").textContent = coords_1[0].toFixed(digits);
-    d.el.querySelector(".coords-north .value").textContent = coords_1[1].toFixed(digits);
+    let east = isNaN(coords_1[0]) ? "<invalid>" : coords_1[0].toFixed(digits);
+    let north = isNaN(coords_1[1]) ? "<invalid>" : coords_1[1].toFixed(digits);
+    d.el.querySelector(".coords-east .value").textContent = east;
+    d.el.querySelector(".coords-north .value").textContent = north;
     for (let el of d.el.querySelectorAll(".unit")) {
       el.textContent = unit;
     }
@@ -540,7 +581,7 @@ function positionError(err) {
     geoWatchID = null;
   }
   document.body.classList.remove("tracking");
-  document.body.classList.add("paused");
+  document.body.classList.add("error");
 
 }
 
