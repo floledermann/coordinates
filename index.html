@@ -358,6 +358,10 @@ document.querySelector("button.track").addEventListener("click", e => {
   if (document.body.classList.contains("error")) {
     document.body.classList.remove("error");
     document.body.classList.add("paused");
+    if (geoWatchID) {
+      navigator.geolocation.clearWatch(geoWatchID);
+      geoWatchID = null;
+    }
     return;
   }
   
