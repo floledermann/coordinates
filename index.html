@@ -346,9 +346,10 @@ if (location.protocol !== 'https:' && !["localhost","127.0.0.1","0.0.0.0"].inclu
 async function importUMD(url, module = {exports:{}}) {
   return (Function('module', 'exports', await (await fetch(url)).text()).call(module, module, module.exports), module).exports;
 }
-// works, but loads hundreds of small files
-// ==> load UMD packaged module instead  
+// "import proj from ..." works as well, but loads hundreds of small files
+// ==> load locally saved UMD packaged module instead  
 //import proj from "https://unpkg.com/proj4@2.9.0/lib/index.js?module";
+
 const proj = await importUMD("proj4_2.9.0.js");
 
 let geoWatchID = null;
