@@ -1,6 +1,6 @@
 # coordinates
 
-A simple web app to show geo coordinates in two different coordinate reference systems.
+A simple web app to show geo coordinates in two different [coordinate reference systems (CRS)](https://en.wikipedia.org/wiki/Spatial_reference_system).
 
 Live at https://cartolab.at/coords/
 
