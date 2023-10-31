@@ -22,6 +22,8 @@ for (let crs of Object.values(all)) {
 
     if (!crs.unit) valid = false;
     
+    if (crs.proj4?.includes("+nadgrids") && !crs.proj4?.includes("+nadgrids=@null")) valid = false;
+    
     if (valid) {
       let bounds = crs.bbox;
       let boundsStr = "-";
